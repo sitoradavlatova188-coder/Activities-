@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Metonymy and Synecdoche: Translation Activities</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f6f4fb;--card:#fff;--ink:#1c1b3a;--mute:#625f85;--line:#dcd8ee;--ind:#2b2a8f;--indt:#fff;--amb:#f4b400;--ambt:#2a2000;--ok:#1d7a46;--okbg:#e2f4e9;--bad:#b3261e;--badbg:#fbe5e3;--soft:#ebe8f7;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12112b;--card:#1c1b40;--ink:#ecebff;--mute:#a9a6d3;--line:#33316b;--ind:#8f8dff;--indt:#12112b;--amb:#f4b400;--ambt:#2a2000;--ok:#6fd49a;--okbg:#173a2a;--bad:#ff8b82;--badbg:#431c1a;--soft:#27255a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12112b;--card:#1c1b40;--ink:#ecebff;--mute:#a9a6d3;--line:#33316b;--ind:#8f8dff;--indt:#12112b;--soft:#27255a;--ok:#6fd49a;--okbg:#173a2a;--bad:#ff8b82;--badbg:#431c1a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:18px 16px 48px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.2;margin:0}
+h1{font-size:26px;font-weight:800;color:var(--ind)}
+h2{font-size:21px;font-weight:800;margin:26px 0 6px}
+h3{font-size:17px;font-weight:600;margin:0 0 4px}
+.sub{color:var(--mute);margin:2px 0 0;font-size:14px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.lang{display:flex;background:var(--soft);border-radius:99px;padding:3px;flex:none}
+button{font:inherit;cursor:pointer;color:inherit}
+.lang button{border:0;background:none;padding:6px 13px;border-radius:99px;font-size:14px;font-weight:700}
+.lang button[aria-pressed=true]{background:var(--ind);color:var(--indt)}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:18px -16px 6px;padding:0 16px 8px;scrollbar-width:none}
+.tabs button{flex:none;border:0;background:var(--soft);padding:9px 17px;border-radius:99px;font-weight:700;font-size:15px}
+.tabs button[aria-selected=true]{background:var(--ind);color:var(--indt)}
+button:focus-visible,textarea:focus-visible{outline:3px solid var(--amb);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:10px 0}
+.card p{margin:4px 0}
+.mute{color:var(--mute);font-size:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.btn{border:1px solid var(--line);background:var(--card);padding:10px 18px;border-radius:12px;font-weight:700}
+.btn.pri{background:var(--ind);color:var(--indt);border-color:var(--ind)}
+.btn.amb{background:var(--amb);color:var(--ambt);border-color:var(--amb)}
+.btn:disabled{opacity:.45;cursor:default}
+.n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--amb);color:var(--ambt);font-weight:800;font-size:14px;margin-right:8px}
+.step{display:flex;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line)}
+.step:first-child{border-top:0}
+.who{border-left:4px solid var(--amb);background:var(--soft);padding:10px 14px;border-radius:0 12px 12px 0;margin:10px 0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td,th{text-align:left;padding:8px 6px;border-top:1px solid var(--line);vertical-align:top}
+th{font-weight:700;color:var(--mute);border-top:0}
+.fc{min-height:230px;display:grid;place-items:center;text-align:center;cursor:pointer;width:100%;font-size:17px;padding:24px;border:2px solid var(--ind);background:var(--card);border-radius:20px}
+.fc .t{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:800;color:var(--ind)}
+.fc.back{background:var(--ind);color:var(--indt)}
+.opt{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--card);padding:12px 14px;border-radius:12px;margin:8px 0;font-size:16px}
+.opt.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.opt.bad{background:var(--badbg);border-color:var(--bad);color:var(--bad)}
+textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--card);color:var(--ink);font:inherit;resize:vertical}
+.src{font-family:Fraunces,Georgia,serif;font-size:21px;font-weight:600}
+.bar{height:8px;border-radius:9px;background:var(--soft);overflow:hidden;margin:6px 0 2px}
+.bar i{display:block;height:100%;background:var(--amb)}
+@media (prefers-reduced-motion:no-preference){.bar i{transition:width .3s}}
+</style>
+</head>
+<body>
+<main>
+<div class="top">
+  <div><h1 id="ttl"></h1><p class="sub" id="sub"></p></div>
+  <div class="lang" role="group" aria-label="Language"><button id="bu" aria-pressed="true">O‘zbekcha</button><button id="be" aria-pressed="false">English</button></div>
+</div>
+<div class="tabs" role="tablist" id="tabs"></div>
+<section id="view" aria-live="polite"></section>
+</main>
+<script>
+const fix = s => s.replace(/(?<=[oOgG])'/g, "\u02bb").replace(/'/g, "\u02bc");
+let lang = "uz", tab = "theory";
+const t = (en, uz) => lang === "en" ? en : fix(uz);
+
+/* ---------- data ---------- */
+const deck = [
+ ["Metonymy","Metonimiya","One concept stands for a closely associated one. “The Crown refused to comment.”","Bir tushuncha unga yaqin bog'liq boshqasini bildiradi. “The Crown refused to comment.”"],
+ ["Synecdoche","Sinekdoxa","A part stands for the whole, or the whole for a part. “We need more hands.”","Qism butunni yoki butun qismni bildiradi. “We need more hands.”"],
+ ["Place for institution","Joy: muassasa","A place name refers to the people or institution there. “The White House issued a statement.”","Joy nomi u yerdagi odamlar yoki muassasani bildiradi. “The White House issued a statement.”"],
+ ["Container for content","Idish: mazmun","The container names what is inside. “She drank a glass.”","Idish nomi ichidagi narsani bildiradi. “She drank a glass.”"],
+ ["Author for work","Muallif: asar","The author’s name means the work. “I am reading Shakespeare.”","Muallif nomi uning asarini bildiradi. “I am reading Shakespeare.”"],
+ ["Producer for product","Ishlab chiqaruvchi: mahsulot","The maker’s name means the product. “He bought a Ford.”","Ishlab chiqaruvchi nomi mahsulotni bildiradi. “He bought a Ford.”"],
+ ["Instrument for activity","Asbob: faoliyat","An object evokes the activity or institution. “The pen is mightier than the sword.”","Buyum faoliyat yoki institutni eslatadi. “The pen is mightier than the sword.”"],
+ ["Preservation","Saqlash","Keep the same figure when it is natural and clear in the target language.","Figura maqsad tilda tabiiy va tushunarli bo'lsa, uni saqlang."],
+ ["Explicitation","Oshkor qilish","Name the intended referent when the original figure would confuse readers.","Asl figura o'quvchini chalg'itsa, nazarda tutilgan narsani aniq ayting."],
+ ["Compensation","Kompensatsiya","Recreate the lost effect elsewhere in the text.","Yo'qolgan ta'sirni matnning boshqa joyida qayta yarating."]
+];
+const quiz = [
+ ["“The Crown refused to comment.” Which figure is this?","“The Crown refused to comment.” Bu qaysi figura?",["M","S","Me"],0],
+ ["“We need more hands.” Which figure is this?","“We need more hands.” Bu qaysi figura?",["M","S","Me"],1],
+ ["“The pen is mightier than the sword” (instrument for activity) is an example of:","“The pen is mightier than the sword” (asbob: faoliyat) nimaga misol?",["M","S","Me"],0],
+ ["Metonymy is based mainly on:","Metonimiya asosan nimaga tayanadi?",[["similarity","o'xshashlik"],["contiguity (association)","yondoshlik (assotsiatsiya)"],["opposition","qarama-qarshilik"]],1],
+ ["The typical relation in synecdoche is:","Sinekdoxaning odatiy munosabati:",[["part and whole","qism va butun"],["cause and effect","sabab va oqibat"],["similarity","o'xshashlik"]],0],
+ ["“Blood-red clouds” is usually classed as:","“Blood-red clouds” odatda qanday tasniflanadi?",[["metaphor or description","metafora yoki tavsif"],["metonymy","metonimiya"],["synecdoche","sinekdoxa"]],0],
+ ["The original figure would confuse target readers. Which strategy fits best?","Asl figura o'quvchini chalg'itadi. Qaysi strategiya mos?",[["explicitation","oshkor qilish"],["preservation","saqlash"],["omission","tushirib qoldirish"]],0],
+ ["“Five mouths to feed” refers to:","“Five mouths to feed” nimaga ishora qiladi?",[["five people","besh kishiga"],["five physical mouths","beshta jismoniy og'izga"],["five meals","besh ovqatga"]],0]
+];
+const names = {M:["Metonymy","Metonimiya"],S:["Synecdoche","Sinekdoxa"],Me:["Metaphor","Metafora"]};
+const drills = [
+ ["The White House issued a statement.","Oq uy bayonot e'lon qildi.","Place for institution (metonymy)","Joy: muassasa (metonimiya)","Readers know “Oq uy” as the US administration, so the image can stay. Add “ma’muriyati” if the context is unclear.","O'zbek o'quvchisi “Oq uy”ni AQSh ma'muriyati deb biladi, shuning uchun obrazni saqlash mumkin. Kontekst noaniq bo'lsa, “ma'muriyati” so'zini qo'shing."],
+ ["The farm needs more hands.","Fermaga ko'proq ishchi qo'l kerak.","Part for whole (synecdoche)","Qism: butun (sinekdoxa)","“Ishchi qo‘l” keeps the image and sounds natural. A bare “qo‘l” may read as literal hands.","“Ishchi qo'l” obrazni saqlaydi va tabiiy eshitiladi. Yolg'iz “qo'l” so'zma-so'z tushunilishi mumkin."],
+ ["He has five mouths to feed.","U besh nafar oila a'zosini boqishi kerak.","Part for whole (synecdoche)","Qism: butun (sinekdoxa)","A literal “besh og‘iz” sounds unnatural, so name the referent: explicitation.","So'zma-so'z “besh og'iz” g'ayritabiiy eshitiladi, shuning uchun nazarda tutilganini ayting: oshkor qilish."],
+ ["The pen is mightier than the sword.","Qalam qilichdan o'tkir.","Instrument for activity (metonymy)","Asbob: faoliyat (metonimiya)","A very close saying exists in Uzbek with the same images, so preservation works.","O'zbek tilida xuddi shu obrazlar bilan juda yaqin maqol bor, shuning uchun saqlash mos keladi."],
+ ["Wall Street reacted calmly to the news.","Moliya bozori ishtirokchilari xabarga xotirjam munosabat bildirdi.","Place for people (metonymy)","Joy: odamlar (metonimiya)","“Uoll-strit” may be unfamiliar to some readers, so the model names the referent: explicitation.","“Uoll-strit” ba'zi o'quvchilarga notanish bo'lishi mumkin, shuning uchun namunada nazarda tutilgan guruh aytilgan: oshkor qilish."],
+ ["She read Shakespeare all summer.","U butun yoz Shekspir asarlarini o'qidi.","Author for work (metonymy)","Muallif: asar (metonimiya)","Adding “asarlarini” makes the work explicit. Plain “Shekspirni o‘qidi” is also acceptable in casual style.","“Asarlarini” so'zi asarni oydinlashtiradi. Oddiy uslubda “Shekspirni o'qidi” ham maqbul."]
+];
+const strat = [
+ ["Preservation","Saqlash","keep the same figure","o'sha figurani saqlash"],
+ ["Equivalent replacement","Teng almashtirish","use another figure with a similar effect","shunga o'xshash ta'sirli boshqa figura"],
+ ["Explicitation","Oshkor qilish","state the intended referent","nazarda tutilganini aniq aytish"],
+ ["Literal + context","So'zma-so'z + kontekst","keep the image when the text explains it","matn tushuntirsa, obrazni saqlash"],
+ ["Compensation","Kompensatsiya","recreate the effect elsewhere","ta'sirni boshqa joyda qayta yaratish"]
+];
+const st = {card:0, flip:false, known:new Set(), q:0, score:0, ans:null, d:0, shown:false};
+
+/* ---------- views ---------- */
+function theory(){
+ let h = `<h2>${t("What are they?","Bular nima?")}</h2>
+ <div class="card"><h3>${t("Metonymy","Metonimiya")}</h3><p>${t("One concept refers to another that is closely associated with it: place for institution, container for content, author for work.","Bir tushuncha unga yaqin bog'liq boshqasiga ishora qiladi: joy: muassasa, idish: mazmun, muallif: asar.")}</p></div>
+ <div class="card"><h3>${t("Synecdoche","Sinekdoxa")}</h3><p>${t("A part stands for the whole, or the whole for a part: “hands” for workers, “wheels” for a car.","Qism butunni yoki butun qismni bildiradi: ishchilar uchun “hands”, mashina uchun “wheels”.")}</p></div>
+ <div class="who"><b>Lakoff &amp; Johnson (1980)</b><br>${t("Metonymy is part of ordinary thought, not only poetic decoration. It directs attention to one aspect of an entity.","Metonimiya oddiy tafakkurning bir qismi, faqat she'riy bezak emas. U narsaning bir jihatiga diqqatni qaratadi.")}</div>
+ <h2>${t("Five strategies","Beshta strategiya")}</h2><div class="card">`;
+ strat.forEach((s,i)=>{h+=`<div class="step"><span class="n">${i+1}</span><div><b>${t(s[0],s[1])}</b><br><span class="mute">${t(s[2],s[3])}</span></div></div>`});
+ h += `</div><h2>${t("Three questions before translating","Tarjimadan oldin uchta savol")}</h2><div class="card">`;
+ [["What is the literal meaning?","Lug'aviy ma'nosi nima?"],["What does it refer to in this context?","Kontekstda nimaga ishora qiladi?"],["What relation connects the two?","Ikkisini qanday munosabat bog'laydi?"]].forEach((q,i)=>{h+=`<div class="step"><span class="n">${i+1}</span><div>${t(q[0],q[1])}</div></div>`});
+ return h + `</div>`;
+}
+function flash(){
+ const c = deck[st.card], k = st.known.size;
+ const face = st.flip ? `<div>${t(c[2],c[3])}</div>` : `<div class="t">${t(c[0],c[1])}</div>`;
+ return `<h2>${t("Flashcards","Kartochkalar")}</h2>
+ <p class="mute">${t("Tap the card to flip it.","Kartani aylantirish uchun bosing.")} ${t("Known","Biladigan")}: ${k}/${deck.length}</p>
+ <div class="bar"><i style="width:${k/deck.length*100}%"></i></div>
+ <button class="fc ${st.flip?"back":""}" id="fc" aria-label="${t("Flip card","Kartani aylantirish")}">${face}</button>
+ <p class="mute">${st.card+1} / ${deck.length}</p>
+ <div class="row"><button class="btn" id="prev">${t("Back","Orqaga")}</button><button class="btn amb" id="again">${t("Again","Yana")}</button><button class="btn pri" id="got">${t("I know it","Bilaman")}</button><button class="btn" id="shuf">${t("Shuffle","Aralashtirish")}</button></div>`;
+}
+function test(){
+ if(st.q >= quiz.length){
+  return `<h2>${t("Result","Natija")}</h2><div class="card"><div class="src">${st.score} / ${quiz.length}</div><p>${st.score>=7?t("Excellent work.","Ajoyib natija."):st.score>=5?t("Good. Review the flashcards and try again.","Yaxshi. Kartochkalarni takrorlab, qayta urinib ko'ring."):t("Review the theory and flashcards, then try again.","Nazariya va kartochkalarni takrorlab, qayta urinib ko'ring.")}</p></div><div class="row"><button class="btn pri" id="redo">${t("Try again","Qayta urinish")}</button></div>`;
+ }
+ const q = quiz[st.q];
+ let h = `<h2>${t("Test","Test")}</h2><p class="mute">${t("Question","Savol")} ${st.q+1} / ${quiz.length}</p><div class="bar"><i style="width:${st.q/quiz.length*100}%"></i></div><div class="card"><p class="src" style="font-size:18px">${t(q[0],q[1])}</p>`;
+ q[2].forEach((o,i)=>{
+  const lab = typeof o==="string" ? t(names[o][0],names[o][1]) : t(o[0],o[1]);
+  let cls = "opt"; if(st.ans!==null){ if(i===q[3]) cls+=" ok"; else if(i===st.ans) cls+=" bad"; }
+  h += `<button class="${cls}" data-o="${i}" ${st.ans!==null?"disabled":""}>${lab}</button>`;
+ });
+ h += `</div>`;
+ if(st.ans!==null) h += `<p><b>${st.ans===q[3]?t("Correct.","To'g'ri."):t("Not quite. The green answer is correct.","Noto'g'ri. To'g'ri javob yashil rangda.")}</b></p><div class="row"><button class="btn pri" id="nq">${st.q+1<quiz.length?t("Next question","Keyingi savol"):t("See result","Natijani ko'rish")}</button></div>`;
+ return h;
+}
+function drill(){
+ const d = drills[st.d];
+ let h = `<h2>${t("Translate","Tarjima")}</h2><p class="mute">${t("Translate into Uzbek, then compare with the model.","O'zbek tiliga tarjima qiling, so'ng namuna bilan solishtiring.")} ${st.d+1} / ${drills.length}</p>
+ <div class="card"><p class="src">${d[0]}</p><textarea id="ans" aria-label="${t("Your translation","Sizning tarjimangiz")}" placeholder="${t("Type your translation here","Tarjimangizni shu yerga yozing")}"></textarea></div>
+ <div class="row"><button class="btn pri" id="chk">${t("Show model","Namunani ko'rsatish")}</button>`;
+ if(st.shown) h += `<button class="btn amb" id="nd">${st.d+1<drills.length?t("Next sentence","Keyingi gap"):t("Start over","Boshidan boshlash")}</button>`;
+ h += `</div>`;
+ if(st.shown) h += `<div class="who"><b>${t("Model translation","Namunaviy tarjima")}</b><br>${fix(d[1])}</div><div class="card"><h3>${t(d[2],d[3])}</h3><p>${t(d[4],d[5])}</p></div>`;
+ return h;
+}
+
+/* ---------- shell ---------- */
+const tabsDef = [["theory","Theory","Nazariya"],["flash","Flashcards","Kartochkalar"],["test","Test","Test"],["drill","Translate","Tarjima"]];
+function draw(){
+ document.documentElement.lang = lang === "uz" ? "uz" : "en";
+ document.getElementById("ttl").textContent = t("Metonymy and Synecdoche","Metonimiya va sinekdoxa");
+ document.getElementById("sub").textContent = t("Translation techniques and practice","Tarjima usullari va mashqlar");
+ document.getElementById("bu").setAttribute("aria-pressed", lang==="uz");
+ document.getElementById("be").setAttribute("aria-pressed", lang==="en");
+ document.getElementById("tabs").innerHTML = tabsDef.map(x=>`<button role="tab" data-t="${x[0]}" aria-selected="${tab===x[0]}">${t(x[1],x[2])}</button>`).join("");
+ document.getElementById("view").innerHTML = {theory,flash,test,drill}[tab]();
+ bind();
+}
+function bind(){
+ const $ = id => document.getElementById(id);
+ document.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>{tab=b.dataset.t;draw()});
+ if($("fc")){
+  $("fc").onclick=()=>{st.flip=!st.flip;draw()};
+  const go = d => {st.card=(st.card+d+deck.length)%deck.length;st.flip=false;draw()};
+  $("prev").onclick=()=>go(-1);
+  $("again").onclick=()=>{st.known.delete(st.card);go(1)};
+  $("got").onclick=()=>{st.known.add(st.card);go(1)};
+  $("shuf").onclick=()=>{for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]]}st.known.clear();st.card=0;st.flip=false;draw()};
+ }
+ document.querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>{const i=+b.dataset.o;st.ans=i;if(i===quiz[st.q][3])st.score++;draw()});
+ if($("nq")) $("nq").onclick=()=>{st.q++;st.ans=null;draw()};
+ if($("redo")) $("redo").onclick=()=>{st.q=0;st.score=0;st.ans=null;draw()};
+ if($("chk")) $("chk").onclick=()=>{const v=$("ans").value;st.shown=true;draw();$("ans").value=v};
+ if($("nd")) $("nd").onclick=()=>{st.d=(st.d+1)%drills.length;st.shown=false;draw()};
+}
+document.getElementById("bu").onclick=()=>{lang="uz";draw()};
+document.getElementById("be").onclick=()=>{lang="en";draw()};
+draw();
+</script>
+</body>
+</html>
